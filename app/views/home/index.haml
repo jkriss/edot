@@ -5,23 +5,5 @@
   %p
     Everything you do for your community matters.
   
-%hr/
-
-%h2 Beta signup
-
-%p
-  Trust us, you'll be the first to know.
-
-- if flash[:message]
-  #flash
-    = flash[:message]
-  
-- semantic_form_for @beta_signup do |f|
-  - f.inputs do
-    = f.input :email_address, :label => 'Email', :required => false
-  - f.buttons do
-    = f.commit_button "Sign up", :button_html => { :class => 'green awesome' }
-    
-%p#beta_count
-  = pluralize(@count, 'person')
-  signed up so far.
+  %p
+    = "Please #{link_to 'sign up', signup_path}!"
