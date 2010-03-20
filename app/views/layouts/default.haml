@@ -1,8 +1,13 @@
 !!!
 %html
   %head
+    :plain
+      <script type="text/javascript" src="http://use.typekit.com/jeg2jrz.js"></script>
+      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     = stylesheet_link_tag 'styles'
+    
     %title Every Day One Thing
     
   %body
-    = yield
+    #main
+      = yield
