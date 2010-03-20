@@ -10,3 +10,20 @@
       = "Please #{link_to 'sign up', signup_path}!"
     - else
       = "I #{link_to 'did a thing', post_path}!"
+
+%hr/   
+      
+%h3 Top Feeds
+
+%ul.plain.things
+  - @latest_things.each do |thing|
+    %li.thing
+      %span.user_link= link_to thing.user.login, thing.user
+      &mdash;
+      %span.category= thing.thing_cat.name
+      %span.points= thing.thing_cat.points
+      %span.text= thing.text
+      %span.stats_link= link_to 'my edot stats', thing.user
+  
+
+%h3 Top Do Gooders

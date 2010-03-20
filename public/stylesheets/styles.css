@@ -107,3 +107,16 @@ hr {
 #tracker img {
   opacity: 0;
 }
+
+ul.plain {
+  list-style: none;
+}
+
+.things {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.things li {
+  margin-bottom: 5px;
+}
