@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  margin: 20px;
+  background: #efefef;
+  color: #3b7793;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 2.5em;
+}
