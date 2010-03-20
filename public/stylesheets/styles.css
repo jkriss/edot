@@ -10,6 +10,10 @@ body {
   color: #333;
 }
 
+#catchphrase {
+  text-align: center;
+}
+
 #main {
   background: #fff;
   width: 500px;
@@ -35,6 +39,7 @@ h1 {
 
 p {
   margin-bottom: 10px;
+  line-height: 1.6em;
 }
 
 hr {
