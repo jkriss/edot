@@ -14,7 +14,8 @@ form.formtastic fieldset ol li p.inline-hints { color:#333; }
 }
 
 .inputs label {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .inputs input {
@@ -28,5 +29,10 @@ form.formtastic fieldset ol li {
 }
 
 form.formtastic fieldset.buttons {
+  margin-top: 5px;
   padding-left: 0;
+}
+
+form.formtastic fieldset {
+  padding: 0;
 }
