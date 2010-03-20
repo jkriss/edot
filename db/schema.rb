@@ -9,10 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100320185232) do
+ActiveRecord::Schema.define(:version => 20100320192652) do
 
   create_table "beta_signups", :force => true do |t|
     t.string   "email_address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "thing_cats", :force => true do |t|
+    t.string   "name"
+    t.integer  "points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "things", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "thing_cat_id"
+    t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

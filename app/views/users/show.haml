@@ -1,3 +1,12 @@
 %h1 I'm a user page!
 
 %h2= "#{@user.login}'s page"
+
+%p
+  = "#{@user.login} has done #{pluralize(@user.things.count, 'thing')}!"
+  
+%ul
+  - @user.things.each do |thing|
+    %li
+      = thing.text
+      = "(#{thing.thing_cat.name})"
