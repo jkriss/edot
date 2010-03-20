@@ -34,6 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'home'
   
   map.resources :beta_signups
+  map.resources :users
 
   # See how all your routes lay out with "rake routes"
 
