@@ -6,4 +6,5 @@
     Everything you do for your community matters.
   
   %p
-    = "Please #{link_to 'sign up', signup_path}!"
+    - if !logged_in?
+      = "Please #{link_to 'sign up', signup_path}!"
