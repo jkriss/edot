@@ -1,0 +1,7 @@
+%h1 I did a thing!
+
+- semantic_form_for @thing do |f|
+  - f.inputs do
+    = f.input :text, :required => false
+    = f.input :thing_cat, :label => 'Thing', :collection => @cats, :required => false
+  = f.buttons

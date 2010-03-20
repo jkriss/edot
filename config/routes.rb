@@ -43,6 +43,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :beta_signups
   map.resources :users
+  map.resources :things
+  
+  map.post '/post', :controller => 'things', :action => 'new'
 
   # See how all your routes lay out with "rake routes"
 
