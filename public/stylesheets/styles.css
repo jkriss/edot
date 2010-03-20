@@ -44,8 +44,20 @@ hr {
   border-top: 1px dashed #aaa;
 }
 
+#flash {
+  background: #aaa;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #f0f8fd;
+  border: 1px solid #dedede;
+}
+
+#beta_count {
+  margin-top: 15px;
+  color: #aaa;
+  font-size: 0.8em;
+  margin-left: 3px;
+}
 #tracker img {
   opacity: 0;
 }
-
-/* forms */
