@@ -3,7 +3,7 @@
   %h1 Every Day One Thing
 
   %p
-    Everything you do for your community matters.
+    How do you add up?
   
   %p
     - if !logged_in?
@@ -20,7 +20,7 @@
     %li.thing
       %span.user_link= link_to thing.user.login, thing.user
       &mdash;
-      %span.category= "#{thing.subcategory.name},"
+      %span.category= "#{thing.subcategory.category.name}: #{thing.subcategory.name},"
       %span.points= "#{thing.subcategory.points} pts."
       %span.text= thing.text
       %span.stats_link= link_to 'my edot stats', thing.user

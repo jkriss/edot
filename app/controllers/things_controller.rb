@@ -4,7 +4,7 @@ class ThingsController < ApplicationController
   
   def new
     @thing = current_user.things.new
-    @cats = Subcategory.all
+    @categories = Category.all
   end
   
   def create

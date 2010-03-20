@@ -3,5 +3,10 @@
 - semantic_form_for @thing do |f|
   - f.inputs do
     = f.input :text, :required => false
-    = f.input :subcategory, :label => 'Thing', :collection => @cats, :required => false
+    =# f.input :subcategory, :label => 'Thing', :collection => @subcategories, :required => false
+    %select#thing_thing_cat_id{ :name => 'thing[thing_cat_id]' }
+      - @categories.each do |cat|
+        %optgroup{ :label => cat.name }
+          - cat.subcategories.each do |sub|
+            %option{ :value => sub.id }= "#{sub.name} (#{sub.points} pts.)"
   = f.buttons

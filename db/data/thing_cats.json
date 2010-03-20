@@ -1,12 +1,24 @@
 [
   {
     "id":1,
-    "name":"Public transportation",
-    "points":5
-  },
-  {
-    "id":2,
-    "name":"Biking",
-    "points":5
+    "name":"Commuting",
+    "subcategories":
+    [
+      {
+        "id":2,
+        "name":"Biking",
+        "points":5
+      },
+      {
+        "id":3,
+        "name":"Bus",
+        "points":3
+      },
+      {
+        "id":4,
+        "name":"Walking",
+        "points":5
+      }
+    ]
   }
 ]
