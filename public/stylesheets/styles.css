@@ -48,6 +48,11 @@ a {
   display: inline;
 }
 
+#header .gravatar {
+  vertical-align: middle;
+  border: 1px solid #ccc;
+}
+
 #main {
   background: #fff;
   margin-top: 30px;

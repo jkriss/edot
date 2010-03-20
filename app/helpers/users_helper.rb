@@ -1,5 +1,19 @@
 module UsersHelper
   
+  def avatar(user, size=50)
+    image_tag gravatar_url_for(user.email || '', :s => size), :class => 'gravatar', :width => size, :height => size
+  end
+  
+  def gravatar_url_for(email, options = {})
+    url_for({ 
+      :gravatar_id => Digest::MD5.hexdigest(email),
+      :host => 'www.gravatar.com',
+      :protocol => 'http://',
+      :only_path => false,
+      :controller => 'avatar.php'}.merge(options))
+  end
+
+  
   #
   # Use this to wrap view elements that the user can't access.
   # !! Note: this is an *interface*, not *security* feature !!
