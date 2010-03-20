@@ -5,19 +5,179 @@
     "subcategories":
     [
       {
-        "id":2,
-        "name":"Biking",
+        "id":8,
+        "name":"Biking ",
         "points":5
       },
       {
         "id":3,
-        "name":"Bus",
-        "points":3
+        "name":"Public Transportation",
+        "points":5
       },
       {
         "id":4,
-        "name":"Walking",
+        "name":"Walking / Running",
         "points":5
+      },
+      {
+        "id":5,
+        "name":"Carpooling",
+        "points":5
+      },
+      {
+        "id":6,
+        "name":"Driving A Hybrid Vehicle",
+        "points":2
+      },
+      {
+        "id":7,
+        "name":"Telecommute ",
+        "points":5
+      }
+    ]
+  },
+  {
+    "id":2,
+    "name":"Eco Re-use ",
+    "subcategories":
+    [
+      {
+        "id":9,
+        "name":"Shopping Bags",
+        "points":1
+      },
+      {
+        "id":10,
+        "name":"Cups / Water Bottle",
+        "points":1
+      },
+      {
+        "id":11,
+        "name":"Re-usable Lunch Container",
+        "points":1
+      },
+      {
+        "id":12,
+        "name":"Recycle",
+        "points":1
+      }
+    ]
+  },
+  {
+    "id":13,
+    "name":"Buying Green",
+    "subcategories":
+    [
+      {
+        "id":14,
+        "name":"Cleaning Product",
+        "points":1
+      },
+      {
+        "id":15,
+        "name":"Light Bulbs",
+        "points":1
+      },
+      {
+        "id":16,
+        "name":"Organic Clothing",
+        "points":1
+      },
+      {
+        "id":17,
+        "name":"Made From Recyclables ",
+        "points":1
+      }
+    ]
+  },
+  {
+    "id":18,
+    "name":"Social",
+    "subcategories":
+    [
+      {
+        "id":19,
+        "name":"Fair Trade Purchase",
+        "points":1
+      },
+      {
+        "id":20,
+        "name":"$25 Microenterprise Loan",
+        "points":1
+      },
+      {
+        "id":21,
+        "name":"$100 Microenterprise Loan",
+        "points":5
+      },
+      {
+        "id":22,
+        "name":"$200+ Microenterprise Loan",
+        "points":10
+      },
+      {
+        "id":23,
+        "name":"Meatless Meal",
+        "points":2
+      }
+    ]
+  },
+  {
+    "id":24,
+    "name":"Volunteer",
+    "subcategories":
+    [
+      {
+        "id":25,
+        "name":"< 2 hours ",
+        "points":1
+      },
+      {
+        "id":26,
+        "name":"Half Day",
+        "points":5
+      },
+      {
+        "id":27,
+        "name":"All Day",
+        "points":10
+      }
+    ]
+  },
+  {
+    "id":28,
+    "name":"Donations",
+    "subcategories":
+    [
+      {
+        "id":29,
+        "name":"$25",
+        "points":1
+      },
+      {
+        "id":30,
+        "name":"$50 ",
+        "points":5
+      },
+      {
+        "id":31,
+        "name":"$100+",
+        "points":10
+      },
+      {
+        "id":32,
+        "name":"1 Item",
+        "points":1
+      },
+      {
+        "id":33,
+        "name":"5 Items",
+        "points":5
+      },
+      {
+        "id":34,
+        "name":"10 Items",
+        "points":10
       }
     ]
   }
