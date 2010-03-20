@@ -13,6 +13,16 @@
     %title Every Day One Thing
     
   %body
+  
+    #header
+      %ul
+        - if logged_in?
+          %li= "Hey there, #{current_user.login}!"
+          %li.last= link_to "Log out", logout_path
+        - else
+          %li= link_to "Log in", login_path
+          %li.last= link_to "Sign up", signup_path
+  
     #main
       = yield
     

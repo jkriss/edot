@@ -5,7 +5,6 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  margin: 30px;
   background: #efefef;
   color: #333;
 }
@@ -14,8 +13,45 @@ body {
   text-align: center;
 }
 
+#header {
+  padding:8px;
+  font-size: 0.9em;
+  background: #ccdce6;
+  text-align: right;
+  border-bottom: 1px solid #ccc;
+}
+
+a {
+  color: #133f59;
+}
+
+#header li {
+ border-right: 1px solid #999;
+ padding-right: 5px;
+ padding-left: 3px;
+}
+
+#header li.last {
+  border-right: none;
+  padding-right: 0;
+}
+
+#header li a {
+  text-transform: lowercase;
+}
+
+#header ul {
+  list-style: none;
+}
+
+#header ul li {
+  display: inline;
+}
+
 #main {
   background: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
   width: 500px;
   padding: 40px;
   margin-left: auto;
