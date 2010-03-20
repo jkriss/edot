@@ -20,8 +20,8 @@
     %li.thing
       %span.user_link= link_to thing.user.login, thing.user
       &mdash;
-      %span.category= thing.thing_cat.name
-      %span.points= thing.thing_cat.points
+      %span.category= "#{thing.subcategory.name},"
+      %span.points= "#{thing.subcategory.points} pts."
       %span.text= thing.text
       %span.stats_link= link_to 'my edot stats', thing.user
   
