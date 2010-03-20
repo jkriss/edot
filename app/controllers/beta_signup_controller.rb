@@ -1,0 +1,2 @@
+class BetaSignupController < ApplicationController
+end

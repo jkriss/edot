@@ -19,7 +19,8 @@ body {
 }
 
 h1, h2, h3 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  color: #444;
 }
 
 h1 {
@@ -29,8 +30,22 @@ h1 {
   font-size: 2.5em;
   font-weight: 1000;
   color: #3b7793;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-top: 1px dashed #aaa;
 }
 
 #tracker img {
   opacity: 0;
 }
+
+/* forms */

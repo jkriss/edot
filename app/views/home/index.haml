@@ -2,3 +2,16 @@
 
 %p
   Pithy description goes here. You know you'll like it.
+  
+%hr/
+
+%h2 Beta signup
+
+%p
+  Trust us, you'll be the first to know.
+  
+- semantic_form_for @beta_signup do |f|
+  - f.inputs do
+    = f.input :email_address, :label => 'Email', :required => false
+  - f.buttons do
+    = f.commit_button "Sign up"
