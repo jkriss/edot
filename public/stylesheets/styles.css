@@ -30,3 +30,7 @@ h1 {
   font-weight: 1000;
   color: #3b7793;
 }
+
+#tracker img {
+  opacity: 0;
+}
