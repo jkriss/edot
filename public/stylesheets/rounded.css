@@ -18,7 +18,7 @@ div.userThings div.userComment blockquote p {
 }
 div.userThings cite.userComment {
 	font-family: "raleway-1","raleway-2", Helvetica, Arial, sans-serif;
-	background: transparent url(images/tip-rounded.gif) no-repeat 15px 0;
+	background: transparent url(/images/tip-rounded.gif) no-repeat 15px 0;
 	position: relative;
 	margin: 0px;
 	padding-left: 35px;
