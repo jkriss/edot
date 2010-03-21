@@ -179,3 +179,7 @@ select {
   display: inline;
   font-size: 0.7em;
 }
+
+#about .name {
+  font-weight: bold;
+}
