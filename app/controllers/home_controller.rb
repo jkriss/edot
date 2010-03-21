@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     @count = BetaSignup.count
     
     @latest_things = Thing.find(:all, :order => "created_at desc", :limit => 10)
-    @top_users = User.find(:all, :order => 'cached_points desc', :limit => 10)
+    @top_users = User.find(:all, :conditions => 'cached_points > 0', :order => 'cached_points desc', :limit => 10)
   end
   
 end
