@@ -234,3 +234,25 @@ select {
 #team .name {
   font-weight: bold;
 }
+
+.categories table {
+  width: 100%;
+}
+
+.categories tr.totals {
+  font-size: 2em;
+  text-align: center;
+}
+
+.categories tr.categories td {
+  padding: 5px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.categories table {
+  border: 2px solid #ccc;
+  background: #fff;
+  padding: 10px;
+  padding-top: 15px;
+}

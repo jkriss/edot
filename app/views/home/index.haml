@@ -20,8 +20,13 @@
 #recent
   = render :partial => 'feeds'
   
-%h3 Today's totals
+%h3 How we add up
 
 %ul.plain.categories
-  - @todays_totals.each do |t|
-    %li= "#{t[:category].name}: #{t[:total]} pts"
+  %table
+    %tr.totals
+      - @todays_totals.each do |t|
+        %td= t[:total]
+    %tr.categories
+      - @todays_totals.each do |t|
+        %td= t[:category].name
