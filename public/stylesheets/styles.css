@@ -264,3 +264,7 @@ h3.add_up {
 table .totals .zero {
   color: #ccc;
 }
+
+#my_totals {
+  margin-bottom: 30px;
+}
