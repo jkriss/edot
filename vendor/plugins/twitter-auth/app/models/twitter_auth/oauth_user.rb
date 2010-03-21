@@ -20,7 +20,7 @@ module TwitterAuth
         
         if user = User.find_by_twitter_id(user_info['id'].to_s)
           # this needs to be unique!
-          user.login = user_info['screen_name']
+          # user.login = user_info['screen_name']
           user.assign_twitter_attributes(user_info)
           user.access_token = token.token
           user.access_secret = token.secret
@@ -43,8 +43,9 @@ module TwitterAuth
         user.login += "-#{User.count}" if user.invalid?
 
         puts "!! user valid? #{user.valid?}"
+        puts "!! #{user.errors.full_messages.inspect}"
 
-        user.save
+        user.save_with_validation(true)
         user
       end
     end
