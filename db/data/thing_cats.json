@@ -119,6 +119,11 @@
         "id":23,
         "name":"Meatless Meal",
         "points":2
+      },
+      {
+        "id":50,
+        "name":"Voting",
+        "points":5
       }
     ]
   },
