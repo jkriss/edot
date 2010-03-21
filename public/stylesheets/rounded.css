@@ -18,7 +18,15 @@ div.userThings div.userComment blockquote {
 div.userThings div.userComment blockquote p {
 	margin: 0px 5px;
 }
-div.userThings cite.userComment {
+
+div.userComment {
+  padding: 5px;
+  margin-bottom: 5px !important;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+cite.userComment {
 	font-family: "raleway-1","raleway-2", Helvetica, Arial, sans-serif;
 	background: transparent url(/images/tip-rounded.gif) no-repeat 15px 0;
 	position: relative;
