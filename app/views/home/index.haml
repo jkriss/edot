@@ -3,17 +3,25 @@
 
 
 #catchphrase
-  %h1 Every Day One Thing
-
-  %p
-    How do you add up?
   
-  %p.action
+  #beta_bubble
+    %a{ :href => 'http://everyday1thing.uservoice.com/forums/47005'}
+      = image_tag 'betaBubble.png'
+
+  #login
     - if !logged_in?
-      = "Please #{link_to 'sign up', signup_path}!"
+      = link_to "Log in with Twitter", twitter_login_path
+      %br/
+      or
+      %br/
+      = "#{link_to 'sign up', signup_path}!"
     - else
       = "#{link_to 'I did a thing', post_path}!"
 
+  #what_thing
+    %a{ :href => about_path }
+      = image_tag 'whatonething.png'
+  
 #recent
   = render :partial => 'feeds'
   

@@ -9,9 +9,32 @@ body {
   color: #333;
 }
 
+a img {
+  border: 0;
+}
+
 #catchphrase {
   text-align: center;
+  margin-bottom: 40px;
 }
+
+#beta_bubble {
+  display: inline;
+  float: left;
+}
+
+#login {
+  font-size: 1.3em;
+  margin-top: 35px;
+  width: 200px;
+  float: left;
+}
+
+#what_thing {
+  display: inline;
+}
+
+
 
 #header {
   padding:8px;
