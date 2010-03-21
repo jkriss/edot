@@ -185,5 +185,32 @@
         "points":10
       }
     ]
+  },
+  {
+    "id":51,
+    "name":"Gardening",
+    "subcategories":
+    [
+      {
+        "id":52,
+        "name":"Planting",
+        "points":10
+      },
+      {
+        "id":53,
+        "name":"Weeding",
+        "points":5
+      },
+      {
+        "id":54,
+        "name":"Harvesting",
+        "points":5
+      },
+      {
+        "id":55,
+        "name":"Canning/Preserving",
+        "points":10
+      }
+    ]
   }
 ]
