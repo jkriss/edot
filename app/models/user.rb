@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of   :email
   validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message
 
-  
+  before_save :update_cached_points
 
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
@@ -48,6 +48,18 @@ class User < ActiveRecord::Base
 
   def email=(value)
     write_attribute :email, (value ? value.downcase : nil)
+  end
+  
+  def points
+    cached_points
+  end
+  
+  def update_cached_points
+    total = 0
+    things.each do |t|
+      total += t.points
+    end
+    self.cached_points = total
   end
 
   protected
