@@ -51,6 +51,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :categories
   map.resources :subcategories
+  
+  map.oauth_callback '/oauth_callback', :controller => 'sessions', :action => 'oauth_callback'
+  map.twitter_login '/twitter/login', :controller => 'sessions', :action => 'twitter_login'
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,0 +1,18 @@
+development:
+  strategy: oauth
+  base_url: "https://twitter.com"
+  oauth_consumer_key: JsxbAfRXPKgsk7GaYQgvow
+  oauth_consumer_secret: tZE3Pmp4MmgNgAT5XScn14fjCPyMoJ9RrGWk0iHIH6w
+  oauth_callback: "http://localhost:3000/oauth_callback"
+test:
+  strategy: oauth
+  base_url: "https://twitter.com"
+  oauth_consumer_key: testkey
+  oauth_consumer_secret: testsecret
+production:
+  strategy: oauth
+  base_url: "https://twitter.com"
+  oauth_consumer_key: JsxbAfRXPKgsk7GaYQgvow
+  oauth_consumer_secret: tZE3Pmp4MmgNgAT5XScn14fjCPyMoJ9RrGWk0iHIH6w
+  oauth_callback: "http://localhost:3000/oauth_callback"
+
