@@ -34,6 +34,7 @@ a {
 #header li.last {
   border-right: none;
   padding-right: 0;
+  margin-left: 5px;
 }
 
 #header li a {
