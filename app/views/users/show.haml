@@ -1,7 +1,7 @@
 %h2= "#{@user.login}'s page"
 
 %p
-  = "#{@user.login} has done #{pluralize(@user.things.count, 'thing')} and earned #{pluralize(@user.points},'point'}!"
+  = "#{@user.login} has done #{pluralize(@user.things.count, 'thing')} and earned #{pluralize(@user.points,'point')}!"
   
   - @user.things.each do |thing|
     - cdate = local(thing.created_at).strftime("%B %d, %I:%M %p")
