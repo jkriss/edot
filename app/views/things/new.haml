@@ -7,7 +7,7 @@
     = f.input :text, :required => false
     =# f.input :subcategory, :label => 'Thing', :collection => @subcategories, :required => false
     %select#thing_thing_cat_id{ :name => 'thing[thing_cat_id]' }
-      %option{ :disabled => true, :selected => true } &mdash; please select a thing &mdash;
+      %option{ :disabled => true, :selected => true, :value => "" } &mdash; please select a thing &mdash;
       - @categories.each do |cat|
         %optgroup{ :label => cat.name }
           - cat.subcategories.each do |sub|

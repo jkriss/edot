@@ -3,7 +3,7 @@ class Thing < ActiveRecord::Base
   belongs_to :subcategory, :foreign_key => 'thing_cat_id'
   belongs_to :user
   
-  validates_presence_of :thing_cat_id
+  validates_presence_of :thing_cat_id, :message => "must be selected"
   
   def points
     subcategory.points
