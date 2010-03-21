@@ -1,6 +1,6 @@
 [
   {
-    "id":1,
+    "id":9,
     "name":"Commuting",
     "subcategories":
     [
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "id":2,
+    "id":10,
     "name":"Eco Re-use ",
     "subcategories":
     [
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "id":13,
+    "id":11,
     "name":"Buying Green",
     "subcategories":
     [
@@ -91,8 +91,8 @@
     ]
   },
   {
-    "id":18,
-    "name":"Social",
+    "id":12,
+    "name":"Socially Cool",
     "subcategories":
     [
       {
@@ -119,11 +119,16 @@
         "id":23,
         "name":"Meatless Meal",
         "points":2
+      },
+      {
+        "id":50,
+        "name":"Voting",
+        "points":5
       }
     ]
   },
   {
-    "id":24,
+    "id":13,
     "name":"Volunteer",
     "subcategories":
     [
@@ -145,7 +150,7 @@
     ]
   },
   {
-    "id":28,
+    "id":14,
     "name":"Donations",
     "subcategories":
     [
@@ -177,6 +182,33 @@
       {
         "id":34,
         "name":"10 Items",
+        "points":10
+      }
+    ]
+  },
+  {
+    "id":51,
+    "name":"Gardening",
+    "subcategories":
+    [
+      {
+        "id":52,
+        "name":"Planting",
+        "points":10
+      },
+      {
+        "id":53,
+        "name":"Weeding",
+        "points":5
+      },
+      {
+        "id":54,
+        "name":"Harvesting",
+        "points":5
+      },
+      {
+        "id":55,
+        "name":"Canning/Preserving",
         "points":10
       }
     ]
