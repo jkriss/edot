@@ -9,7 +9,7 @@
     - if !logged_in?
       = "Please #{link_to 'sign up', signup_path}!"
     - else
-      = "I #{link_to 'did a thing', post_path}!"
+      = "#{link_to 'I did a thing', post_path}!"
 
 %hr/   
       
@@ -27,3 +27,8 @@
   
 
 %h3 Top Do Gooders
+
+%ul.plain.users
+  - @top_users.each do |u|
+    %li= "#{link_to(u.login, u)}: #{u.points} pts"
+   

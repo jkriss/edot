@@ -8,8 +8,13 @@ class ThingsController < ApplicationController
   end
   
   def create
-    @thing = current_user.things.create!(params[:thing])
-    redirect_to current_user
+    @thing = current_user.things.new(params[:thing])
+    if @thing.save
+      redirect_to current_user
+    else
+      @categories = Category.all
+      render :new
+    end
   end
   
 end

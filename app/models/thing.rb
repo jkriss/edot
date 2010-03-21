@@ -5,4 +5,8 @@ class Thing < ActiveRecord::Base
   
   validates_presence_of :thing_cat_id
   
+  def points
+    subcategory.points
+  end
+  
 end
