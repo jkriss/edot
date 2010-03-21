@@ -2,7 +2,7 @@ require 'digest/sha1'
 
 class User < ActiveRecord::Base
   
-  has_many :things
+  has_many :things, :order => 'created_at desc'
   
   include Authentication
   include Authentication::ByPassword
