@@ -7,11 +7,16 @@
   
   - @user.things.each do |thing|
     - cdate = local(thing.created_at).strftime("%B %d, %I:%M %p")
+    - whitespace = /^ *$/
+    - if whitespace.match(thing.text)
+      - usercomment = "&nbsp;"
+    - else
+      - usercomment = thing.text
     %div.userThings
       %div.userComment
         %blockquote
           %p
-            = thing.text
+            = usercomment
       %cite.userComment
         = "(#{thing.subcategory.name})"
         = "-"
