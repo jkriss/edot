@@ -7,7 +7,7 @@
   
 %ul
   - @user.things.each do |thing|
-    - cdate = thing.created_at.strftime("%B %d, %I:%M %p")
+    - cdate = local(thing.created_at).strftime("%B %d, %I:%M %p")
     %li
       = thing.text
       = "(#{thing.subcategory.name})"
