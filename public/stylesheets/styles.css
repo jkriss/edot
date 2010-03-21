@@ -166,3 +166,16 @@ select {
   text-decoration: underline;
   border-bottom: none;
 }
+
+#tweet_stuff {
+  margin-top: 10px;
+}
+
+#tweet_it {
+  display: inline;
+}
+
+#tweet_stuff label {
+  display: inline;
+  font-size: 0.7em;
+}
