@@ -5,8 +5,10 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background: #efefef;
   color: #333;
+  margin: 0;
+  padding: 0;
+  background: #fff url('/images/green-gradient.png') repeat-x left top;
 }
 
 a img {
@@ -39,13 +41,18 @@ a img {
 #header {
   padding:8px;
   font-size: 0.9em;
-  background: #ccdce6;
+  background: #15598A;
+  color: #fff;
   text-align: right;
   border-bottom: 1px solid #ccc;
 }
 
 a {
   color: #133f59;
+}
+
+#header a {
+  color: #ccc;
 }
 
 #header li {

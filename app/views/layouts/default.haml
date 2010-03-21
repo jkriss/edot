@@ -24,9 +24,9 @@
     %title= iphone? ? 'EDOT' : 'Every Day One Thing'
     
   %body
-  
+    = image_tag "edot-banner-nobackground.png"
     #header
-      = link_to iphone? ? 'home' : 'Every Day One Thing', root_path, :class => 'home_link'
+      =# link_to iphone? ? 'home' : 'Every Day One Thing', root_path, :class => 'home_link'
       %ul
         - if logged_in?
           %li
