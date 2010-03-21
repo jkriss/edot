@@ -5,12 +5,14 @@ class HomeController < ApplicationController
   def index
     today = Time.zone.today
     @todays_totals = Category.all
-    @todays_totals.collect! do |c|
-      { 
+    @todays_totals.collect! do|c|
+      {
         :category => c,
         :total => c.total_points#("created_at > #{today.to_time.utc.to_f.to_i}")
       }
     end
+    puts @todays_totals.inspect
+    @todays_totals.sort!{ |a,b| puts a.inspect; b[:total] <=> a[:total] }
   end
   
   def feeds
