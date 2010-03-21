@@ -26,7 +26,7 @@
   %table
     %tr.totals
       - @todays_totals.each do |t|
-        %td= t[:total]
+        %td{ :class => t[:total] > 0 ? '' : 'zero' }= t[:total]
     %tr.categories
       - @todays_totals.each do |t|
         %td= t[:category].name

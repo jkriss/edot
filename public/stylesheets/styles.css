@@ -260,3 +260,7 @@ select {
 h3.add_up {
   margin-top: 30px;
 }
+
+table .totals .zero {
+  color: #ccc;
+}
