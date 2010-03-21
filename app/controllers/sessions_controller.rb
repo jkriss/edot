@@ -37,8 +37,9 @@ class SessionsController < ApplicationController
     session[:request_token] = nil
     session[:request_token_secret] = nil
 
+    
     @user = User.identify_or_create_from_access_token(@access_token)
-
+    
     session[:user_id] = @user.id
 
     cookies[:remember_token] = @user.remember_me

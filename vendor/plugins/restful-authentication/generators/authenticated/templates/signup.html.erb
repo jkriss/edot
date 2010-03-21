@@ -1,6 +1,13 @@
 <h1>Sign up as a new user</h1>
 <%% @<%= file_name %>.password = @<%= file_name %>.password_confirmation = nil %>
 
+<p class="twitter_login">
+  <%= link_to 'Log in with your Twitter account', twitter_login_path %>
+</p>
+
+<p>Or create an account just for Every Day One Thing</p>
+
+
 <%%= error_messages_for :<%= file_name %> %>
 <%% form_for :<%= file_name %>, :url => <%= model_controller_routing_name %>_path do |f| -%>
 <p><%%= label_tag 'login' %><br/>
