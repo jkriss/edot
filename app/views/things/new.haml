@@ -1,10 +1,13 @@
 %h1 I did a thing!
 
+= error_messages_for :thing
+
 - semantic_form_for @thing do |f|
   - f.inputs do
     = f.input :text, :required => false
     =# f.input :subcategory, :label => 'Thing', :collection => @subcategories, :required => false
     %select#thing_thing_cat_id{ :name => 'thing[thing_cat_id]' }
+      %option{ :disabled => true, :selected => true } &mdash; please select a thing &mdash;
       - @categories.each do |cat|
         %optgroup{ :label => cat.name }
           - cat.subcategories.each do |sub|
