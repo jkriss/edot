@@ -5,8 +5,10 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background: #efefef;
   color: #333;
+  margin: 0;
+  padding: 0;
+  background: #fff url('/images/green-gradient.png') repeat-x left top;
 }
 
 #catchphrase {
