@@ -24,7 +24,7 @@
     %title= iphone? ? 'EDOT' : 'Every Day One Thing'
     
   %body
-    = image_tag "edot-banner-nobackground.png"
+    %a{ :href => root_path }= image_tag "edot-banner-nobackground.png"
     #header
       =# link_to iphone? ? 'home' : 'Every Day One Thing', root_path, :class => 'home_link'
       %ul
@@ -50,7 +50,7 @@
           <script type="text/javascript">clicky.init(196401);</script>
           <noscript><p><img id="clicky-img" alt="Clicky" width="1" height="1" src="http://in.getclicky.com/196401ns.gif" /></p></noscript>
 
-    - unless iphone?
+    - if false #unless iphone?
       :plain
         <script type="text/javascript">
           var uservoiceOptions = {

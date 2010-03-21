@@ -1,14 +1,7 @@
-%h3 Recent Things
+%h3 Recent Things We Did
 
 %ul.plain.things
-  - @latest_things.each do |thing|
-    %li.thing
-      %span.user_link= link_to thing.user.login, thing.user
-      &mdash;
-      %span.category= "#{thing.subcategory.category.name}: #{thing.subcategory.name},"
-      %span.points= "#{thing.subcategory.points} pts."
-      %span.text= thing.text
-      %span.link= link_to '&#x2192;', thing  
+  = render :partial => 'things/thing', :collection => @latest_things, :locals => { :show_user => true }
 
 %h3 Top Do Gooders
 
