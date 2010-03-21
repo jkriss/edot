@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     @todays_totals.collect! do |c|
       { 
         :category => c,
-        :total => c.total_points("created_at > #{today.to_time.utc.to_f.to_i}")
+        :total => c.total_points#("created_at > #{today.to_time.utc.to_f.to_i}")
       }
     end
   end
