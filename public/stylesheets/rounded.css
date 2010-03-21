@@ -9,8 +9,7 @@
 div.userThings div.userComment {
   font-family: "raleway-1","raleway-2", Helvetica, Arial, sans-serif;
   margin-bottom: 10px;
-  border: 1px solid #127AC2 !important; 
-  border: 1px solid #ccc !important; 
+  border: 2px solid #ccc !important; 
   background-color: #fff !important;
   width: 100%;
   margin-bottom: 15px;
@@ -37,12 +36,12 @@ cite.userComment {
   font-style: normal;
   position: relative;
   margin: 0px;
-  padding-left: 40px !important;
+  padding-left: 35px !important;
   padding-top: 10px;
   font-size: .8em;
   top: 2px;
   color: #666;
-  background: transparent url(/images/tip-rounded.gif) no-repeat 15px 0;
+  background: transparent url(/images/tip-rounded-light.gif) no-repeat 15px 1px;
 }
 
 cite.userComment a {
