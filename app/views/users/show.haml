@@ -5,13 +5,15 @@
 %p
   = "#{@user.login} has done #{pluralize(@user.things.count, 'thing')}!"
   
-%ul
   - @user.things.each do |thing|
     - cdate = local(thing.created_at).strftime("%B %d, %I:%M %p")
-    %li
-      = thing.text
-      = "(#{thing.subcategory.name})"
-      = "--"
-      %i
+    %div.userThings
+      %div.userComment
+        %blockquote
+          %p
+            = thing.text
+      %cite.userComment
+        = "(#{thing.subcategory.name})"
+        = "-"
         = "(#{cdate})"
 
