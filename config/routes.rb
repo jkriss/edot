@@ -45,6 +45,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :things
   
+  map.feeds '/feeds', :controller => 'home', :action => 'feeds'
+  
   map.post '/post', :controller => 'things', :action => 'new'
 
   # See how all your routes lay out with "rake routes"
