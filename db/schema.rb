@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100321005531) do
+ActiveRecord::Schema.define(:version => 20100321022857) do
 
   create_table "beta_signups", :force => true do |t|
     t.string   "email_address"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20100321005531) do
     t.string   "remember_token",            :limit => 40
     t.datetime "remember_token_expires_at"
     t.integer  "cached_points"
+    t.boolean  "is_admin"
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true

@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
   layout "default"
   
   include AuthenticatedSystem
+  
+  def require_admin
+    redirect_to root_path unless logged_in? && current_user.is_admin
+  end
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
