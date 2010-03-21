@@ -3,6 +3,14 @@ class HomeController < ApplicationController
   before_filter :load_stuff
   
   def index
+    today = Time.zone.today
+    @todays_totals = Category.all
+    @todays_totals.collect! do |c|
+      { 
+        :category => c,
+        :total => c.total_points("created_at > #{today.to_time.utc.to_f}")
+      }
+    end
   end
   
   def feeds

@@ -16,3 +16,9 @@
 
 #recent
   = render :partial => 'feeds'
+  
+%h3 Today's totals
+
+%ul.plain.categories
+  - @todays_totals.each do |t|
+    %li= "#{t[:category].name}: #{t[:total]} pts"
