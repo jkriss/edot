@@ -19,8 +19,9 @@
     - if iphone?
       = stylesheet_link_tag 'iphone'
       %meta{ :name => 'viewport', :content => 'width=device-width,user-scalable=no' }
-      
-    %title Every Day One Thing
+      %link{ :rel => 'apple-touch-icon', :href => '/images/EdotEarthAvatar_bigger.png' }
+
+    %title= iphone? ? 'EDOT' : 'Every Day One Thing'
     
   %body
   

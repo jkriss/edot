@@ -1,7 +1,7 @@
 module UsersHelper
   
   def avatar(user, size=50)
-    image_tag gravatar_url_for(user.email || '', :s => size), :class => 'gravatar', :width => size, :height => size
+    image_tag gravatar_url_for(user.email || '', :s => size, :d => user.profile_image_url), :class => 'gravatar', :width => size, :height => size
   end
   
   def gravatar_url_for(email, options = {})

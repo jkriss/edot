@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100321022857) do
+ActiveRecord::Schema.define(:version => 20100321164306) do
 
   create_table "beta_signups", :force => true do |t|
     t.string   "email_address"
@@ -46,17 +46,37 @@ ActiveRecord::Schema.define(:version => 20100321022857) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login",                     :limit => 40
-    t.string   "name",                      :limit => 100, :default => ""
-    t.string   "email",                     :limit => 100
-    t.string   "crypted_password",          :limit => 40
-    t.string   "salt",                      :limit => 40
+    t.string   "login",                        :limit => 40
+    t.string   "name",                         :limit => 100, :default => ""
+    t.string   "email",                        :limit => 100
+    t.string   "crypted_password",             :limit => 40
+    t.string   "salt",                         :limit => 40
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "remember_token",            :limit => 40
+    t.string   "remember_token",               :limit => 40
     t.datetime "remember_token_expires_at"
     t.integer  "cached_points"
     t.boolean  "is_admin"
+    t.string   "twitter_id"
+    t.string   "access_token"
+    t.string   "access_secret"
+    t.string   "location"
+    t.string   "description"
+    t.string   "profile_image_url"
+    t.string   "url"
+    t.string   "profile_background_color"
+    t.string   "profile_sidebar_fill_color"
+    t.string   "profile_link_color"
+    t.string   "profile_sidebar_border_color"
+    t.string   "profile_text_color"
+    t.string   "profile_background_image_url"
+    t.string   "profile_background_tile"
+    t.string   "time_zone"
+    t.integer  "friends_count"
+    t.integer  "statuses_count"
+    t.integer  "followers_count"
+    t.integer  "favourites_count"
+    t.integer  "utc_offset"
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
