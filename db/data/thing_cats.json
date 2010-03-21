@@ -6,7 +6,7 @@
     [
       {
         "id":8,
-        "name":"Biking ",
+        "name":"Biking",
         "points":5
       },
       {
@@ -31,7 +31,7 @@
       },
       {
         "id":7,
-        "name":"Telecommute ",
+        "name":"Telecommute",
         "points":5
       }
     ]
@@ -85,14 +85,14 @@
       },
       {
         "id":17,
-        "name":"Made From Recyclables ",
+        "name":"Made From Recyclables",
         "points":1
       }
     ]
   },
   {
     "id":18,
-    "name":"Socially Cool",
+    "name":"Social",
     "subcategories":
     [
       {
@@ -129,7 +129,7 @@
     [
       {
         "id":25,
-        "name":"< 2 hours ",
+        "name":"< 2 hours",
         "points":1
       },
       {
@@ -156,7 +156,7 @@
       },
       {
         "id":30,
-        "name":"$50 ",
+        "name":"$50",
         "points":5
       },
       {
