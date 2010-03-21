@@ -12,7 +12,10 @@
   %cite.userComment
     = "(#{thing.subcategory.name})"
     = "-"
-    = "(#{cdate})"
+    - if current_page?(thing)
+      = "(#{cdate})"
+    - else
+      = link_to "(#{cdate})", thing
     - if defined?(show_user) && show_user
       \-
       = link_to thing.user.login, thing.user
