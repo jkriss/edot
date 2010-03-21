@@ -25,7 +25,7 @@
   %body
   
     #header
-      = link_to 'Every Day One Thing', root_path, :class => 'home_link'
+      = link_to iphone? ? 'home' : 'Every Day One Thing', root_path, :class => 'home_link'
       %ul
         - if logged_in?
           %li

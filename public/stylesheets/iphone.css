@@ -12,6 +12,11 @@ h1 {
   padding: 10px;
 }
 
+.home_link {
+  top: 5px;
+  left: 5px;
+}
+
 label {
   font-size: 1.5em;
 }
