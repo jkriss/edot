@@ -63,6 +63,10 @@ a {
   margin-right: auto;
 }
 
+.action {
+  font-size: 1.5em;
+}
+
 h1, h2, h3 {
   margin-bottom: 10px;
   color: #444;
