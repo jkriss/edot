@@ -32,6 +32,21 @@ a img {
   float: left;
 }
 
+#login .awesome {
+  font-size: 0.9em;
+  font-weight: normal;
+  padding-top: 8px !important;
+}
+
+.awesome {
+  background-color: #1b7106 !important;
+}
+
+#or {
+  padding: 10px;
+  color: #666;
+}
+
 #what_thing {
   display: inline;
 }

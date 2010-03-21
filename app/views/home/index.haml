@@ -1,7 +1,3 @@
-:erb
-  <%= periodically_call_remote :update => 'recent', :frequency => '5', :url => feeds_path, :method => :get %>
-
-
 #catchphrase
   
   #beta_bubble
@@ -10,11 +6,10 @@
 
   #login
     - if !logged_in?
-      = link_to "Log in with Twitter", twitter_login_path
-      %br/
-      or
-      %br/
-      = "#{link_to 'sign up', signup_path}!"
+      = link_to "Log in with Twitter", twitter_login_path, :class => 'awesome'
+      #or
+        or
+      = link_to 'Sign up', signup_path, :class => 'awesome'
     - else
       = "#{link_to 'I did a thing', post_path}!"
 
