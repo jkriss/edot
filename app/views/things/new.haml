@@ -4,7 +4,7 @@
 
 - semantic_form_for @thing do |f|
   - f.inputs do
-    = f.input :text, :required => false
+    = f.input :text, :required => false, :input_html => { :maxlength => 100 }
     =# f.input :subcategory, :label => 'Thing', :collection => @subcategories, :required => false
     %select#thing_thing_cat_id{ :name => 'thing[thing_cat_id]' }
       %option{ :disabled => true, :selected => true, :value => "" } &mdash; please select a thing &mdash;
@@ -12,4 +12,8 @@
         %optgroup{ :label => cat.name }
           - cat.subcategories.each do |sub|
             %option{ :value => sub.id }= "#{sub.name} (#{sub.points} pts.)"
+    - if current_user.twitter_id?
+      #tweet_stuff
+        = check_box_tag 'tweet_it'
+        %label{ :for => 'tweet_it' } Post it to Twitter!
   = f.buttons
