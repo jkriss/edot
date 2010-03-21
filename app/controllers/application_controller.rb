@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
   def require_admin
     redirect_to root_path unless logged_in? && current_user.is_admin
   end
+  
+  helper_method :iphone?
+  
+  def iphone?
+    request.user_agent.include?("iPhone")
+  end
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password

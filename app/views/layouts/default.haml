@@ -16,11 +16,16 @@
     = stylesheet_link_tag 'awesome_buttons'
     = stylesheet_link_tag 'rounded'
     
+    - if iphone?
+      = stylesheet_link_tag 'iphone'
+      %meta{ :name => 'viewport', :content => 'width=device-width,user-scalable=no' }
+      
     %title Every Day One Thing
     
   %body
   
     #header
+      = link_to 'Every Day One Thing', root_path, :class => 'home_link'
       %ul
         - if logged_in?
           %li
@@ -32,6 +37,7 @@
           %li.last= link_to "Sign up", signup_path
   
     #main
+        
       = yield
     
     - if Rails.env.production?
@@ -42,24 +48,25 @@
           <script type="text/javascript">clicky.init(196401);</script>
           <noscript><p><img id="clicky-img" alt="Clicky" width="1" height="1" src="http://in.getclicky.com/196401ns.gif" /></p></noscript>
 
-    :plain
-      <script type="text/javascript">
-        var uservoiceOptions = {
-          key: 'everyday1thing',
-          host: 'everyday1thing.uservoice.com', 
-          forum: '47005',
-          alignment: 'left',
-          background_color:'#316790', 
-          text_color: 'white',
-          hover_color: '#06c',
-          lang: 'en',
-          showTab: true
-        };
-        function _loadUserVoice() {
-          var s = document.createElement('script');
-          s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "uservoice.com/javascripts/widgets/tab.js";
-          document.getElementsByTagName('head')[0].appendChild(s);
-        }
-        _loadSuper = window.onload;
-        window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
-      </script>
+    - unless iphone?
+      :plain
+        <script type="text/javascript">
+          var uservoiceOptions = {
+            key: 'everyday1thing',
+            host: 'everyday1thing.uservoice.com', 
+            forum: '47005',
+            alignment: 'left',
+            background_color:'#316790', 
+            text_color: 'white',
+            hover_color: '#06c',
+            lang: 'en',
+            showTab: true
+          };
+          function _loadUserVoice() {
+            var s = document.createElement('script');
+            s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "uservoice.com/javascripts/widgets/tab.js";
+            document.getElementsByTagName('head')[0].appendChild(s);
+          }
+          _loadSuper = window.onload;
+          window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+        </script>

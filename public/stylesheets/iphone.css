@@ -1,0 +1,46 @@
+body {
+  background: #fff;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+#main {
+  margin-top: 0;
+  width: 260px;
+  padding: 10px;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+input {
+  font-size: 2em;
+  padding: 5px;
+  display: block;
+  width: 250px;
+}
+
+label {
+  display: block;
+}
+
+div.userThings div.userComment {
+	width: 250px;
+}
+
+cite.userComment {
+	display: block;
+	margin: 0px;
+	margin-top: -5px;
+	padding-left: 35px;
+	padding-top: 10px;
+	font-size: .8em;
+	top: 2px;
+}
+
+div.userComment {
+  margin-bottom: 0 !important;
+}
