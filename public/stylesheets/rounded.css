@@ -6,7 +6,9 @@ div.userThings div.userComment {
 	border: 3px solid #fff;
 	background-color: #b7e0ff;
 	width: 500px;
-	margin: 5px;
+	//margin: 20px;
+	margin-bottom: 15px;
+	margin-top: 15px;
 }
 div.userThings div.userComment blockquote {
 	font-family: "raleway-1","raleway-2", Helvetica, Arial, sans-serif;
@@ -23,7 +25,7 @@ div.userThings cite.userComment {
 	margin: 0px;
 	padding-left: 35px;
 	padding-top: 10px;
-	top: 1px;
-	font-size: .7em;
+	font-size: .8em;
+	top: 2px;
 }
 
