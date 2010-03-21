@@ -1,6 +1,6 @@
 class ThingsController < ApplicationController
   
-  before_filter :login_required, :for => :new
+  before_filter :login_required, :only => :new
   
   def new
     @thing = current_user.things.new
