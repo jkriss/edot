@@ -122,8 +122,11 @@ a {
   width: 600px;
   padding: 40px;
   padding-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 50px;
+}
+
+#banner {
+  margin-left: 44px;
 }
 
 .action {
@@ -145,9 +148,9 @@ h1 {
   margin-bottom: 15px;
 }
 
-h1 a {
+h2 a {
   text-decoration: none;
-  color: #3b7793;
+  color: #444;
 }
 
 h1 a:hover {
