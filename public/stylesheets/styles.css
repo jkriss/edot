@@ -129,3 +129,16 @@ ul.plain {
 select {
   font-size: 12px !important;
 }
+
+#thing .time {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 10px;
+  color: #999;
+}
+
+.thing .link a {
+  color: #aaa;
+  text-decoration: none;
+  border-bottom: 1px dotted #aaa;
+}

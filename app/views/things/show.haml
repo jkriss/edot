@@ -1,0 +1,7 @@
+%h1= "#{@thing.user.login} did a thing!"
+
+#thing
+  %span.category= "#{@thing.subcategory.category.name}: #{@thing.subcategory.name},"
+  %span.points= "#{@thing.subcategory.points} pts."
+  %span.text= @thing.text
+  %span.time= local(@thing.created_at).strftime("%B %d, %I:%M %p")

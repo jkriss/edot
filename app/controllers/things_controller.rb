@@ -7,6 +7,10 @@ class ThingsController < ApplicationController
     @categories = Category.all
   end
   
+  def show
+    @thing = Thing.find(params[:id])
+  end
+  
   def create
     @thing = current_user.things.new(params[:thing])
     if @thing.save
