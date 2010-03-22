@@ -77,7 +77,7 @@ a {
 #header li {
  border-right: 1px solid #999;
  padding-right: 5px;
- padding-left: 3px;
+ padding-left: 8px;
 }
 
 #header li.last {
@@ -233,4 +233,38 @@ select {
 
 #team .name {
   font-weight: bold;
+}
+
+.categories table {
+  width: 100%;
+}
+
+.categories tr.totals {
+  font-size: 2em;
+  text-align: center;
+}
+
+.categories tr.categories td {
+  padding: 5px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.categories table {
+  border: 2px solid #ccc;
+  background: #fff;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+h3.add_up {
+  margin-top: 30px;
+}
+
+table .totals .zero {
+  color: #ccc;
+}
+
+#my_totals {
+  margin-bottom: 30px;
 }

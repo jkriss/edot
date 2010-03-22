@@ -1,11 +1,4 @@
-%h3 Recent Things We Did
+%h3 Recent things we did
 
 %ul.plain.things
-  = render :partial => 'things/thing', :collection => @latest_things, :locals => { :show_user => true }
-
-%h3 Top Do Gooders
-
-%ul.plain.users
-  - @top_users.each do |u|
-    %li= "#{link_to(u.login, u)}: #{u.points} pts"
- 
+  = render :partial => 'things/thing', :collection => @latest_things, :locals => { :show_user => true } 

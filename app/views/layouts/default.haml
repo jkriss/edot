@@ -31,11 +31,20 @@
           %li
             = avatar(current_user, 20) unless iphone?
             = "Hey there, #{current_user.login}!"
-          %li.last= link_to "Log out", logout_path
+          %li
+            = link_to "Log out", logout_path
         - else
           %li
             = link_to "Log in", login_path
-          %li.last= link_to "Sign up", signup_path
+          %li
+            = link_to "Sign up", signup_path
+        %li 
+          = link_to 'about', about_path
+        %li 
+          = link_to 'team', team_path
+        %li.last 
+          %a{ :href => 'http://cafepress.com/everyday1thing' } store
+
   
     #main
         

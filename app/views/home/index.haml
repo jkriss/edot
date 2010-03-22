@@ -16,12 +16,43 @@
   #what_thing
     %a{ :href => about_path }
       = image_tag 'whatonething.png'
-  
-#recent
-  = render :partial => 'feeds'
-  
-%h3 Today's totals
+      
 
-%ul.plain.categories
-  - @todays_totals.each do |t|
-    %li= "#{t[:category].name}: #{t[:total]} pts"
+- if logged_in?
+  #me
+    #my_feed
+      %h3 Recent things I did
+
+    %ul.plain.things
+      = render :partial => 'things/thing', :collection => current_user.things.find(:all, :limit => 3)
+
+    #my_totals
+      %h3.add_up My total things
+
+      %ul.plain.categories
+        %table
+          %tr.totals
+            - @todays_totals.each do |t|
+              %td{ :class => t[:total] > 0 ? '' : 'zero' }= t[:total]
+          %tr.categories
+            - @todays_totals.each do |t|
+              %td= t[:category].name
+  
+#everyone{ :class => logged_in? ? 'right' : ''}
+  #global_feed
+    %h3 Recent things we did
+
+    %ul.plain.things
+      = render :partial => 'things/thing', :collection => @latest_things, :locals => { :show_user => true } 
+
+  #global_totals
+    %h3.add_up How we add up
+
+    %ul.plain.categories
+      %table
+        %tr.totals
+          - @todays_totals.each do |t|
+            %td{ :class => t[:total] > 0 ? '' : 'zero' }= t[:total]
+        %tr.categories
+          - @todays_totals.each do |t|
+            %td= t[:category].name

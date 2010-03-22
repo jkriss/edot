@@ -36,12 +36,12 @@ cite.userComment {
   font-style: normal;
   position: relative;
   margin: 0px;
-  padding-left: 35px !important;
+  padding-left: 30px !important;
   padding-top: 10px;
   font-size: .8em;
   top: 2px;
   color: #666;
-  background: transparent url(/images/tip-rounded-light.gif) no-repeat 15px 1px;
+  background: transparent url(/images/tip-rounded-light.gif) no-repeat 10px 1px;
 }
 
 cite.userComment a {
@@ -56,5 +56,5 @@ blockquote p .gravatar {
 }
 
 blockquote p {
-  margin-left: 1px !important;
+  margin-left: 0 !important;
 }
