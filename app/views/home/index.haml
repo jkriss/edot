@@ -38,10 +38,10 @@
       %ul.plain.categories
         %table
           %tr.totals
-            - @todays_totals.each do |t|
+            - @user_totals.each do |t|
               %td{ :class => t[:total] > 0 ? '' : 'zero' }= t[:total]
           %tr.categories
-            - @todays_totals.each do |t|
+            - @user_totals.each do |t|
               %td= t[:category].name
   
 #everyone{ :class => logged_in? ? 'right' : ''}
