@@ -268,3 +268,62 @@ table .totals .zero {
 #my_totals {
   margin-bottom: 30px;
 }
+
+/* last minute home page stuff */
+
+#new_thing {
+  display: block;
+  text-align: left;
+}
+
+#login.logged_in {
+  float: none !important;
+  width: auto !important;
+}
+
+#new_thing label {
+  width: auto !important;
+  padding-top: 0 !important;
+  float: none !important;
+  font-size: 1em;
+}
+
+#new_thing label {
+  font-weight: bold;
+}
+
+
+#new_thing input {
+  width: 100%;
+}
+
+#new_thing input.text {
+  margin-bottom: 10px;
+}
+
+#tweet_stuff {
+  margin-top: 0 !important;
+}
+
+
+#tweet_stuff label {
+  font-weight: normal;
+  font-size: 0.6em !important;
+}
+
+#tweet_it {
+  display: inline;
+  width: 10px !important;
+}
+
+#new_thing fieldset.buttons {
+  margin-top: -10px;
+}
+
+#message {
+  border: 2px solid #ccc;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
