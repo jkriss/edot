@@ -50,6 +50,11 @@ cite.userComment a {
   border-bottom: 1px solid #ccc;
 }
 
+.userComment .blank {
+  color: #aaa;
+  font-size: 0.8em;
+}
+
 blockquote p .gravatar {
   vertical-align: -7px;
   margin-right: 3px;

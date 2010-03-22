@@ -13,6 +13,10 @@ class ThingsController < ApplicationController
     @thing = Thing.find(params[:id])
   end
   
+  def index
+    @things = Thing.find(:all, :limit => 100, :order => 'created_at desc')
+  end
+  
   def create
     @thing = current_user.things.new(params[:thing])
     if @thing.save
