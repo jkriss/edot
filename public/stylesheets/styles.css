@@ -257,6 +257,11 @@ select {
   padding-top: 15px;
 }
 
+
+.images  {
+  padding:10px;
+}
+
 h3.add_up {
   margin-top: 30px;
 }
