@@ -1,21 +1,27 @@
+- if flash[:message]
+  #message
+    = flash[:message]
+
 #catchphrase
   
-  #beta_bubble
-    %a{ :href => 'http://everyday1thing.uservoice.com/forums/47005'}
-      = image_tag 'betaBubble.png'
+  - unless logged_in?
+    #beta_bubble
+      %a{ :href => 'http://everyday1thing.uservoice.com/forums/47005'}
+        = image_tag 'betaBubble.png'
 
-  #login
+  #login{ :class => logged_in? ? 'logged_in' : '' }
     - if !logged_in?
       = link_to "Log in with Twitter", twitter_login_path, :class => 'awesome'
       #or
         or
       = link_to 'Sign up', signup_path, :class => 'awesome'
     - else
-      = "#{link_to 'I did a thing', post_path}!"
+      = render :partial => 'things/new_thing'
 
-  #what_thing
-    %a{ :href => about_path }
-      = image_tag 'whatonething.png'
+  - unless logged_in?
+    #what_thing
+      %a{ :href => about_path }
+        = image_tag 'whatonething.png'
       
 
 - if logged_in?

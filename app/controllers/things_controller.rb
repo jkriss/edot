@@ -25,7 +25,8 @@ class ThingsController < ApplicationController
         logger.warn "tweeting! #{tweet}"
         current_user.twitter.post('/statuses/update.json', 'status' => tweet)
       end
-      redirect_to current_user
+      flash[:message] = "You did a thing!"
+      redirect_to root_path
     else
       @categories = Category.all
       render :new

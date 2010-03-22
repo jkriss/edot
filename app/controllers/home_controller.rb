@@ -6,6 +6,12 @@ class HomeController < ApplicationController
     today = Time.zone.today
     @todays_totals = get_totals
     @user_totals = get_totals(:user_id => current_user.id) if logged_in?
+    
+    if logged_in?
+      @thing = current_user.things.new
+      @categories = Category.all
+    end
+    
   end
   
   def feeds
