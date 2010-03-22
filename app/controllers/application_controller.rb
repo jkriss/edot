@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   helper_method :iphone?
   
   def iphone?
-    request.user_agent.include?("iPhone")
+    request.user_agent && request.user_agent.include?("iPhone")
   end
 
   # Scrub sensitive parameters from your log
