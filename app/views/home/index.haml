@@ -32,6 +32,8 @@
     %ul.plain.things
       = render :partial => 'things/thing', :collection => current_user.things.find(:all, :limit => 3)
 
+    = link_to "more of #{current_user.login}'s things...", current_user, :class => 'more'
+    
     #my_totals
       %h3.add_up My total things
 
@@ -50,6 +52,8 @@
 
     %ul.plain.things
       = render :partial => 'things/thing', :collection => @latest_things, :locals => { :show_user => true } 
+      
+    = link_to 'more things...', things_path, :class => 'more'
 
   #global_totals
     %h3.add_up How we add up
