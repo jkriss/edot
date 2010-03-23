@@ -23,14 +23,22 @@
     %title= iphone? ? 'EDOT' : 'Every Day One Thing'
     
   %body
-    %a#banner{ :href => root_path }= image_tag "edot-banner-nobackground.png"
+    - unless iphone?
+      %a#banner{ :href => root_path }
+        = image_tag "edot-banner-nobackground.png"
+    - else
+      #banner
+        Every Day One Thing
     #header
       =# link_to iphone? ? 'home' : 'Every Day One Thing', root_path, :class => 'home_link'
       %ul
+        - if iphone?
+          %li= link_to 'home', root_path
         - if logged_in?
-          %li
-            = avatar(current_user, 20) unless iphone?
-            = "Hey there, #{current_user.login}!"
+          - unless iphone?
+            %li
+              = avatar(current_user, 20) unless iphone?
+              = "Hey there, #{current_user.login}!"
           %li
             = link_to "Log out", logout_path
         - else

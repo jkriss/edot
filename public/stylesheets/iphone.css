@@ -10,6 +10,38 @@ h1 {
   margin-top: 0;
   width: 260px;
   padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login {
+  width: 260px;
+  margin-bottom: 20px;
+}
+
+#banner {
+  margin-left: 0;
+  padding: 7px;
+  font-weight: bold;
+  background: #427200;
+  color: #fff;
+}
+
+#header {
+  text-align: left;
+  padding: 6px;
+}
+
+#header li {
+ padding-right: 3px;
+ padding-left: 5px;
+ border-right: 1px solid #ddd;
+}
+
+
+
+#global_feed {
+  margin-top: 20px;
 }
 
 .home_link {
@@ -30,6 +62,14 @@ input {
 
 label {
   display: block;
+}
+
+#thing_text_input {
+  width: 245px;
+}
+
+#thing_text_input label {
+  font-size: 0.8em;
 }
 
 div.userThings div.userComment {

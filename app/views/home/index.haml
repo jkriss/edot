@@ -4,7 +4,7 @@
 
 #catchphrase
   
-  - unless logged_in?
+  - unless logged_in? || iphone?
     #beta_bubble
       %a{ :href => 'http://everyday1thing.uservoice.com/forums/47005'}
         = image_tag 'betaBubble.png'
@@ -18,7 +18,7 @@
     - else
       = render :partial => 'things/new_thing'
 
-  - unless logged_in?
+  - unless logged_in? || iphone?
     #what_thing
       %a{ :href => about_path }
         = image_tag 'whatonething.png'
@@ -34,17 +34,18 @@
 
     = link_to "more of my things...", current_user, :class => 'more'
     
-    #my_totals
-      %h3.add_up My total things
+    - unless iphone?
+      #my_totals
+        %h3.add_up My total things
 
-      %ul.plain.categories
-        %table
-          %tr.totals
-            - @user_totals.each do |t|
-              %td{ :class => t[:total] > 0 ? '' : 'zero' }= t[:total]
-          %tr.categories
-            - @user_totals.each do |t|
-              %td= t[:category].name
+        %ul.plain.categories
+          %table
+            %tr.totals
+              - @user_totals.each do |t|
+                %td{ :class => t[:total] > 0 ? '' : 'zero' }= t[:total]
+            %tr.categories
+              - @user_totals.each do |t|
+                %td= t[:category].name
   
 #everyone{ :class => logged_in? ? 'right' : ''}
   #global_feed
@@ -55,14 +56,15 @@
       
     = link_to 'more things...', things_path, :class => 'more'
 
-  #global_totals
-    %h3.add_up= "How all #{User.count} of our edotters add up:"
+  - unless iphone?
+    #global_totals
+      %h3.add_up= "How all #{User.count} of our edotters add up:"
 
-    %ul.plain.categories
-      %table
-        %tr.totals
-          - @todays_totals.each do |t|
-            %td{ :class => t[:total] > 0 ? '' : 'zero' }= t[:total]
-        %tr.categories
-          - @todays_totals.each do |t|
-            %td= t[:category].name
+      %ul.plain.categories
+        %table
+          %tr.totals
+            - @todays_totals.each do |t|
+              %td{ :class => t[:total] > 0 ? '' : 'zero' }= t[:total]
+          %tr.categories
+            - @todays_totals.each do |t|
+              %td= t[:category].name
