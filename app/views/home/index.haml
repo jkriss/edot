@@ -32,7 +32,7 @@
     %ul.plain.things
       = render :partial => 'things/thing', :collection => current_user.things.find(:all, :limit => 3)
 
-    = link_to "more of #{current_user.login}'s things...", current_user, :class => 'more'
+    = link_to "more of my things...", current_user, :class => 'more'
     
     #my_totals
       %h3.add_up My total things
