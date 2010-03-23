@@ -344,3 +344,21 @@ a.more:hover {
   text-decoration: underline;
   color: #777;
 }
+
+.option_number {
+  font-weight: bold;
+}
+.option_title {
+  font-weight: bold;
+  margin-left:5px;
+}
+.option_body {
+  margin-left:10px;
+}
+.option_note {
+  font-style: italic;
+  font-size: 0.8em;
+  color: #777;
+  margin-left:10px;
+}
+
