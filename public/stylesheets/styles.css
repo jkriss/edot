@@ -25,14 +25,14 @@ a img {
   float: left;
 }
 
-#login {
+#catchphrase #login {
   font-size: 1.3em;
   margin-top: 8px;
   width: 300px;
   float: left;
 }
 
-#login .awesome {
+#catchphrase #login .awesome {
   font-size: 0.9em;
   font-weight: normal;
   padding-top: 8px !important;
@@ -281,7 +281,7 @@ table .totals .zero {
   text-align: left;
 }
 
-#login.logged_in {
+#catchphrase #login.logged_in {
   float: none !important;
   width: auto !important;
 }

@@ -33,7 +33,8 @@
       =# link_to iphone? ? 'home' : 'Every Day One Thing', root_path, :class => 'home_link'
       %ul
         - if iphone?
-          %li= link_to 'home', root_path
+          %li
+            = link_to 'home', root_path
         - if logged_in?
           - unless iphone?
             %li
