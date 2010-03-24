@@ -11,4 +11,11 @@ class SubcategoriesController < ApplicationController
     @subcategory = Subcategory.find(params[:id])
   end
   
+  def update
+    @subcategory = Subcategory.find(params[:id])
+    @subcategory.update_attributes!(params[:subcategory])
+    redirect_to edit_category_path(@subcategory.category)
+  end
+
+  
 end
