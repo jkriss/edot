@@ -3,5 +3,6 @@
   = @category.name
   
 - semantic_form_for @subcategory do |f|
+  = hidden_field_tag 'category_id', @category.id
   = f.inputs
   = f.buttons

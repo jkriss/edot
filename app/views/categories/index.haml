@@ -3,7 +3,6 @@
     %li
       = cat.name
       = link_to 'edit', edit_category_path(cat)
-      = link_to 'delete', category_path(cat), :method => :delete, :confirm => "Are you sure you want to delete? #{cat.name}"
       
 %hr/
 
