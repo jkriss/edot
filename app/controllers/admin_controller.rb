@@ -1,4 +1,6 @@
 require 'spreadsheet'
+#require 'tempfile'
+require 'stringio'
 
 class AdminController < ApplicationController
   
@@ -38,7 +40,7 @@ class AdminController < ApplicationController
   def add_user_sheet(book)
     sheet = book.create_worksheet
     sheet.name = "Users"
-    @users = User.find(:all, :order => 'login')
+    @users = User.find(:all, :order => 'created_at desc')
     headerfmt = Spreadsheet::Format.new :weight => :bold
     sheet.row(0).default_format = headerfmt
     datefmt = Spreadsheet::Format.new :number_format => 'YYYY-MM-DD hh:mm:ss'
@@ -63,17 +65,18 @@ class AdminController < ApplicationController
 
   # Builds an excel report.
   def report_xls
-    reportfile = '/tmp/excel-file2.xls'
     book = Spreadsheet::Workbook.new
 
     add_thing_sheet(book)
     add_user_sheet(book)
 
-    book.write reportfile
+    buffer = StringIO.new()
 
-    report = File.open(reportfile).read
-    File.delete(reportfile)
-    send_data report, :filename => 'foo2.xls', :content_type => 'application/vnd.ms-excel'
+    book.write buffer
+    filename = Time.now.localtime.strftime("edot-%Y-%m-%d-%H%M.xls")
+
+    send_data buffer.string, :filename => filename, 
+                             :content_type => 'application/vnd.ms-excel'
   end
 
 end
