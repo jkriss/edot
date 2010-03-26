@@ -59,6 +59,9 @@ ActionController::Routing::Routes.draw do |map|
   map.oauth_callback '/oauth_callback', :controller => 'sessions', :action => 'oauth_callback'
   map.twitter_login '/twitter/login', :controller => 'sessions', :action => 'twitter_login'
 
+  map.admin '/admin', :controller => 'admin', :action => 'index'
+  map.report_xls '/admin/report/xls', :controller => 'admin', :action => 'report_xls'
+
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
