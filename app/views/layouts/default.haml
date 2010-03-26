@@ -40,6 +40,9 @@
             %li
               = avatar(current_user, 20) unless iphone?
               = "Hey there, #{current_user.login}!"
+          - if current_user.is_admin?
+            %li
+              = link_to "Admin", admin_path
           %li
             = link_to "Log out", logout_path
         - else
