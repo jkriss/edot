@@ -27,8 +27,11 @@
 - if logged_in?
   #me
     #my_feed
-      %h3 Recent things I did
+    
+      %p= "You've done #{pluralize(current_user.things.count, 'thing')} and earned #{pluralize(current_user.points,'point')}!"
 
+      %h3 Recent things I did
+      
     %ul.plain.things
       = render :partial => 'things/thing', :collection => current_user.things.find(:all, :limit => 3)
 
