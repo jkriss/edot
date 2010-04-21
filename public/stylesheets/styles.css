@@ -362,3 +362,7 @@ a.more:hover {
   margin-left:10px;
 }
 
+ol#top_users {
+  line-height: 1.5em;
+  margin-left: 20px;
+}

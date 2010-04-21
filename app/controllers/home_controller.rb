@@ -18,6 +18,10 @@ class HomeController < ApplicationController
     render :partial => 'feeds'
   end
   
+  def top
+    @top_users = User.find(:all, :order => 'cached_points desc', :limit => 20)
+  end
+  
   private
   def load_stuff
     @latest_things = Thing.find(:all, :order => "created_at desc", :limit => 3)

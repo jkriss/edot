@@ -44,6 +44,7 @@ ActionController::Routing::Routes.draw do |map|
   map.team '/team', :controller => 'static', :action => 'team'
   
   map.root :controller => 'home'
+  map.top_users '/top', :controller => 'home', :action => 'top'
   
   map.resources :beta_signups
   map.resources :users
