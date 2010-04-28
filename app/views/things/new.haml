@@ -11,7 +11,7 @@
       - @categories.each do |cat|
         %optgroup{ :label => cat.name }
           - cat.subcategories.each do |sub|
-            %option{ :value => sub.id }= "#{sub.name} (#{sub.points} pts.)"
+            %option{ :value => sub.id }= "#{sub.name} (#{pluralize(sub.points, 'dot')})"
     - if current_user.twitter_id?
       #tweet_stuff
         = check_box_tag 'tweet_it'
