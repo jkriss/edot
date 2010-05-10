@@ -1,5 +1,6 @@
 class Category < ActiveRecord::Base
   
+  default_scope :order => 'name asc'
   has_many :category_subcategories
   has_many :subcategories, :through => :category_subcategories
   
