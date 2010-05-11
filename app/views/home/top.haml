@@ -4,8 +4,9 @@
   - @top_users.each do |u|
     %li
       = "#{link_to u.login, u} (#{u.points} dots)"
-      %span.contact
-        - if u.twitter_id
-          = link_to 'twitter', "http://twitter.com/#{u.login}"
-        - if u.email
-          = link_to 'email', "mailto:#{u.email}"
+      - if logged_in? && current_user.admin?
+        %span.contact
+          - if u.twitter_id
+            = link_to 'twitter', "http://twitter.com/#{u.login}"
+          - if u.email
+            = link_to 'email', "mailto:#{u.email}"
