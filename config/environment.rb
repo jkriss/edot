@@ -1,10 +1,10 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
-BITLY_API_KEY = "R_6683c0eff65f9e208f721bf26e7cf754"
-BITLY_LOGIN = "jkriss"
+BITLY_API_KEY = "R_de2a5dee119b59755a774ffdd230016f"
+BITLY_LOGIN = "everydayonething"
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')

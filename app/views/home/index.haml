@@ -4,10 +4,6 @@
 
 #catchphrase
   
-  - unless logged_in? || iphone?
-    #beta_bubble
-      %a{ :href => 'http://everyday1thing.uservoice.com/forums/47005'}
-        = image_tag 'betaBubble.png'
 
   #login{ :class => logged_in? ? 'logged_in' : '' }
     - if !logged_in?
@@ -18,11 +14,27 @@
     - else
       = render :partial => 'things/new_thing'
 
-  - unless logged_in? || iphone?
-    #what_thing
-      %a{ :href => about_path }
-        = image_tag 'whatonething.png'
-      
+  - unless iphone? || logged_in?
+    :plain
+      <style type="text/css">
+        #login {
+          width: auto !important;
+          float: left;
+          padding-top: 50px;
+        }
+
+        #video {
+          display: inline;
+        }
+
+        #vp1Ulg01 {
+          width: 400px;
+          margin-left: 15px;
+        }
+      </style>
+
+    #video
+      <object id="vp1Ulg01" width="400" height="222" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"><param name="movie" value="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1275234494&f=Ulg013ldqfbsZM0iFxAnvg&d=134&m=a&r=w&i=m&ct=Every%20Day%20One%20Thing&cu=http://www.everydayonething.org&options="></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed id="vp1Ulg01" src="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1275234494&f=Ulg013ldqfbsZM0iFxAnvg&d=134&m=a&r=w&i=m&ct=Every%20Day%20One%20Thing&cu=http://www.everydayonething.org&options=" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="432" height="240"></embed></object>
 
 - if logged_in?
   #me

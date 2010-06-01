@@ -3,3 +3,4 @@ oauth
 ezcrypto
 rdiscount
 spreadsheet
+rails -v 2.3.8
