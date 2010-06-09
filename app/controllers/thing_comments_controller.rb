@@ -13,7 +13,7 @@ class ThingCommentsController < ApplicationController
   end
   
   def replies
-    @comments = current_user.replies
+    @comments = current_user.replies.find(:all, :limit => 50)
   end
   
   def destroy

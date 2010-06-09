@@ -12,7 +12,7 @@ class Thing < ActiveRecord::Base
   end
   
   def safe_text
-    text.blank? ? "did a thing!" : text
+    text.blank? ? "a thing!" : text
   end
   
 end

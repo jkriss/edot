@@ -391,3 +391,50 @@ ul.replies .userComment {
 .replies .thing a {
   color: #666;
 }
+
+.comments {
+  margin-top: 10px;
+}
+.comment {
+  font-size: 0.9em;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.comment cite {
+  font-style: normal;
+  font-size: 0.8em;
+}
+
+.comment .delete {
+  display: inline;
+  font-size: 0.9em;
+}
+
+.comment .delete a {
+  color: #5c1313;
+  vertical-align: 6%;
+}
+
+#new_thing_comment li {
+  list-style: none;
+}
+
+#thing_comment_comment_input label {
+  display: none;
+}
+
+#thing_comment_comment {
+  border: 1px solid #ccc;
+  font-size: 1.2em;
+  width: 98%;
+  height: 30px;
+  padding: 5px;
+}
+
+#comment_form {
+  margin-top: 20px;
+  width: 102%;
+  border-top: 1px dashed #ccc;
+  padding-top: 20px;
+}

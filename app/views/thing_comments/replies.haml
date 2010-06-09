@@ -1,3 +1,5 @@
+%h3 Recent comments on your things
+
 %ul.replies
   - last_thing = nil
   - @comments.each do |comment|
@@ -5,7 +7,7 @@
       - unless comment.thing == last_thing
         .thing
         
-          = "You #{link_to comment.thing.safe_text, comment.thing}, and they said&hellip;"
+          = "You did #{link_to comment.thing.safe_text, comment.thing} and they said&hellip;"
     .userThings
       .userComment
         %blockquote
