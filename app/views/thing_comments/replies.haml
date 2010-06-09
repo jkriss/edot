@@ -1,21 +1,24 @@
-%h3 Recent comments on the things you've done
+- if @comments.count == 0
+  %h3 No comments, yet.
+- else
+  %h3 Recent comments on the things you've done
 
-%ul.replies
-  - last_thing = nil
-  - @comments.each do |comment|
-    %li
-      - unless comment.thing == last_thing
-        .thing
+  %ul.replies
+    - last_thing = nil
+    - @comments.each do |comment|
+      %li
+        - unless comment.thing == last_thing
+          .thing
         
-          = "You did #{link_to comment.thing.safe_text, comment.thing} and they said&hellip;"
-    .userThings
-      .userComment
-        %blockquote
-          %p
-            = avatar(comment.user, 25)
-            = comment.comment
-      %cite.userComment
-        = link_to format(comment.created_at), thing_path(comment.thing, :anchor => 'comments')
-        \-
-        = link_to_user comment.user
-    - last_thing = comment.thing
+            = "You did #{link_to comment.thing.safe_text, comment.thing} and they said&hellip;"
+      .userThings
+        .userComment
+          %blockquote
+            %p
+              = avatar(comment.user, 25)
+              = comment.comment
+        %cite.userComment
+          = link_to format(comment.created_at), thing_path(comment.thing, :anchor => 'comments')
+          \-
+          = link_to_user comment.user
+      - last_thing = comment.thing
