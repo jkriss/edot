@@ -8,7 +8,7 @@ class ThingCommentsController < ApplicationController
     if @comment.save
       redirect_to @thing
     else
-      render @thing
+      render 'things/show'
     end
   end
   

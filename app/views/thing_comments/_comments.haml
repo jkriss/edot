@@ -1,5 +1,5 @@
 - comments = @thing.comments
-- new_comment = @thing.comments.new
+- new_comment = @comment || @thing.comments.new
 %a{ :name => 'comments' }
 #comments
   
@@ -22,6 +22,7 @@
 #comment_form
   - if logged_in?
     - semantic_form_for new_comment, :url => thing_thing_comments_path(@thing) do |f|
+      = f.semantic_errors
       = f.input :comment, :label => '', :input_html => { :class => 'thing_text' }
       - f.buttons do
         = f.commit_button :label => 'Add your comment!', :button_html => { :class => 'awesome' }
