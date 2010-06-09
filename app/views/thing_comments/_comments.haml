@@ -1,0 +1,28 @@
+- comments = @thing.comments
+- new_comment = @thing.comments.new
+%a{ :name => 'comments' }
+#comments
+
+  - if comments.count == 0
+    No comments, yet. Be the first!
+  - else
+    = pluralize @thing.comments.count, 'Comment'
+  
+  %ul.comments
+    - comments.each do |comment|
+      .comment
+        .content
+          = comment.comment
+        - if logged_in? && comment.user == current_user
+          .delete
+            = link_to 'x', thing_thing_comment_path(@thing, comment), :method => :delete, :confirm => "Are you sure you want to delete your comment?"
+          
+  
+#comment_form
+  - if logged_in?
+    - semantic_form_for new_comment, :url => thing_thing_comments_path(@thing) do |f|
+      = f.input :comment
+      - f.buttons do
+        = f.commit_button :label => 'Post your comment'
+  - else
+    Please log in to comment

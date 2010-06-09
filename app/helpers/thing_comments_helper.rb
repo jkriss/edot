@@ -1,0 +1,2 @@
+module ThingCommentsHelper
+end

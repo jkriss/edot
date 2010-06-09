@@ -48,7 +48,11 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :beta_signups
   map.resources :users
-  map.resources :things
+  map.resources :things do |thing|
+    thing.resources :thing_comments, :as => 'comments'
+  end
+  
+  map.replies '/replies', :controller => 'thing_comments', :action => 'replies'
   
   map.feeds '/feeds', :controller => 'home', :action => 'feeds'
   

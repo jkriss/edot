@@ -371,3 +371,23 @@ ol#top_users {
   font-size: 0.8em;
   color: #666;
 }
+
+/* replies */
+
+ul.replies {
+  list-style: none;
+}
+
+ul.replies .userComment {
+  margin-left: 20px;
+}
+
+.replies .thing {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 25px;
+}
+
+.replies .thing a {
+  color: #666;
+}

@@ -4,6 +4,8 @@ class User < TwitterAuth::GenericUser
   
   has_many :things, :order => 'created_at desc'
   
+  has_many :replies, :class_name => 'ThingComment', :through => :things, :source => :comments, :order => 'created_at desc'
+  
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken

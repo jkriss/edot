@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100321164306) do
+ActiveRecord::Schema.define(:version => 20100609201014) do
 
   create_table "beta_signups", :force => true do |t|
     t.string   "email_address"
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(:version => 20100321164306) do
   create_table "thing_cats", :force => true do |t|
     t.string   "name"
     t.integer  "points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "thing_comments", :force => true do |t|
+    t.integer  "thing_id"
+    t.integer  "user_id"
+    t.string   "comment",    :limit => 2500
     t.datetime "created_at"
     t.datetime "updated_at"
   end

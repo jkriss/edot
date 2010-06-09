@@ -41,6 +41,12 @@
     #my_feed
     
       %p= "You've done #{pluralize(current_user.things.count, 'thing')} and earned #{pluralize(current_user.points,'dot')}!"
+      
+      - if current_user.replies.count > 0
+        %p
+          Other edotters have left 
+          = link_to pluralize(current_user.replies.count, 'comment'), replies_path
+          on your things.
 
       %h3 Recent things I did
       
