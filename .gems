@@ -3,4 +3,5 @@ oauth
 ezcrypto
 rdiscount
 spreadsheet
+haml
 rails -v 2.3.8
