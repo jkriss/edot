@@ -19,3 +19,6 @@
     - if defined?(show_user) && show_user
       \-
       = link_to thing.user.login, thing.user
+    - if thing.comments.count > 0 && !current_page?(thing)
+      \-
+      = link_to pluralize(thing.comments.count, 'comment'), thing_path(thing, :anchor => 'comments')
