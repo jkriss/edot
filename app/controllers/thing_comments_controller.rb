@@ -14,6 +14,9 @@ class ThingCommentsController < ApplicationController
   
   def replies
     @comments = current_user.replies.find(:all, :limit => 50)
+    @last_view = current_user.last_comment_view
+    current_user.last_comment_view = Time.now
+    current_user.save
   end
   
   def destroy

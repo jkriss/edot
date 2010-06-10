@@ -12,7 +12,7 @@
         
             = "You did #{link_to comment.thing.safe_text, comment.thing} and they said&hellip;"
       .userThings
-        .userComment
+        .userComment{ :class => comment.created_at < @last_view ? 'old' : '' }
           %blockquote
             %p
               = avatar(comment.user, 25)

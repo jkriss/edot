@@ -35,7 +35,11 @@ class User < TwitterAuth::GenericUser
   # uff.  this is really an authorization, not authentication routine.  
   # We really need a Dispatch Chain here or something.
   # This will also let us return a human error message.
-  #
+  
+  def new_replies
+    last_comment_view.nil? ? replies : replies.find(:all, :conditions => ["thing_comments.created_at > ?", last_comment_view])
+  end
+  
   def self.authenticate(login, password)
     return nil if login.blank? || password.blank?
     u = find_by_login(login.downcase) || find_by_email(login.downcase) # need to get the salt

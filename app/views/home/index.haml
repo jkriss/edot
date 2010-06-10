@@ -42,15 +42,17 @@
     
       %p= "You've done #{pluralize(current_user.things.count, 'thing')} and earned #{pluralize(current_user.points,'dot')}!"
       
-      - if current_user.replies.count > 0
+      - c = current_user.new_replies.count      
+      - if c > 0
         %p
           Other edotters have left
-          - c = current_user.replies.count
           - english_count = c.to_alphabetic
           - label = (c == 1) ? 'comment' : 'comments'
           /= link_to pluralize(current_user.replies.count, 'comment'), replies_path
           = link_to "#{english_count} #{label}", replies_path
-          on your things.
+          on your things since you last checked.
+      - elsif current_user.replies.count > 0 # have had comments, just no new comments
+        %p No new comments. Check back soon!
 
       %h3 Recent things I did
       

@@ -478,3 +478,11 @@ a.comment_img{
 .comment .content {
   margin-top: 15px;
 }
+
+.userComment.old {
+  color: #999;
+  filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+}
