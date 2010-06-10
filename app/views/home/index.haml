@@ -51,7 +51,7 @@
           /= link_to pluralize(current_user.replies.count, 'comment'), replies_path
           = link_to "#{english_count} #{label}", replies_path
           on your things since you last checked.
-      - elsif current_user.replies.count > 0 # have had comments, just no new comments
+      - else
         %p No new comments. Check back soon!
 
       %h3 Recent things I did
