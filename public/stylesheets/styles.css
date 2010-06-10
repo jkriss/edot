@@ -406,11 +406,6 @@ ul.replies .userComment {
   font-size: 0.8em;
 }
 
-.comment .delete {
-  display: inline;
-  font-size: 0.9em;
-}
-
 .comment .delete a {
   color: #5c1313;
   vertical-align: 6%;
@@ -442,4 +437,32 @@ ul.replies .userComment {
 a.comment_img{
   border: none !important;
   vertical-align: bottom;
+}
+
+/* bubble version of comments */
+
+.comment .content {
+  font-size: 0.9em;
+  margin-top: 5px;
+  margin-left: 15px;
+
+  background: #fff;
+  border: 1px solid #ccc;
+  -moz-border-radius: 5px;
+  padding: 5px;
+  width: auto;
+}
+
+.comment img {
+  vertical-align: middle;
+}
+
+.comment cite {
+  display: block;
+  margin-top: 5px;
+  margin-left: 18px;
+}
+
+.comment .content {
+  margin-top: 15px;
 }
