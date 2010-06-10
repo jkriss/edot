@@ -4,7 +4,7 @@ class ThingsController < ApplicationController
   
   include ActionView::Helpers::TextHelper
   
-  before_filter :login_required, :only => :new
+  before_filter :login_required, :only => [:new, :destroy]
   
   def new
     @thing = current_user.things.new
@@ -37,6 +37,14 @@ class ThingsController < ApplicationController
       @categories = Category.all
       render :new
     end
+  end
+  
+  def destroy
+    @thing = Thing.find(params[:id])
+    if @thing.user == current_user
+      @thing.destroy
+    end
+    redirect_to root_path
   end
   
 end

@@ -372,6 +372,12 @@ ol#top_users {
   color: #666;
 }
 
+.delete a {
+  color: #5c1313 !important;
+  border: none !important;
+  text-decoration: underline !important;
+}
+
 /* replies */
 
 ul.replies {
@@ -407,7 +413,6 @@ ul.replies .userComment {
 }
 
 .comment .delete a {
-  color: #5c1313;
   vertical-align: 6%;
 }
 
