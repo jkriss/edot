@@ -432,11 +432,22 @@ ul.replies .userComment {
   width: 102%;
   border-top: 1px dashed #ccc;
   padding-top: 20px;
+  
+  margin-left: 30px;
+  width: auto;
+}
+
+#comment_form .commit {
+  margin-top: 5px;
 }
 
 a.comment_img{
   border: none !important;
   vertical-align: bottom;
+}
+
+#log_in_to_comment {
+  font-size: 0.8em;
 }
 
 /* bubble version of comments */
