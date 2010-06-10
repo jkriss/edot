@@ -18,7 +18,6 @@
               .delete
                 = link_to 'x', thing_thing_comment_path(@thing, comment), :method => :delete, :confirm => "Are you sure you want to delete your comment?"
           
-  
 #comment_form
   - if logged_in?
     - semantic_form_for new_comment, :url => thing_thing_comments_path(@thing) do |f|

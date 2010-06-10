@@ -19,6 +19,10 @@
     - if defined?(show_user) && show_user
       \-
       = link_to thing.user.login, thing.user
-    - if thing.comments.count > 0 && !current_page?(thing)
+    - unless current_page?(thing)
+      - if thing.comments.count > 0
+        \-
+        = link_to pluralize(thing.comments.count, 'comment'), thing_path(thing, :anchor => 'comments')
       \-
-      = link_to pluralize(thing.comments.count, 'comment'), thing_path(thing, :anchor => 'comments')
+      = link_to "add a comment", thing_path(thing, :anchor => 'comments')
+      = link_to image_tag('tiny-comment.png'), thing_path(thing, :anchor => 'comments'), :class => 'comment_img'

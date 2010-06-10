@@ -438,3 +438,8 @@ ul.replies .userComment {
   border-top: 1px dashed #ccc;
   padding-top: 20px;
 }
+
+a.comment_img{
+  border: none !important;
+  vertical-align: bottom;
+}
