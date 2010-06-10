@@ -44,8 +44,12 @@
       
       - if current_user.replies.count > 0
         %p
-          Other edotters have left 
-          = link_to pluralize(current_user.replies.count, 'comment'), replies_path
+          Other edotters have left
+          - c = current_user.replies.count
+          - english_count = c.to_alphabetic
+          - label = (c == 1) ? 'comment' : 'comments'
+          /= link_to pluralize(current_user.replies.count, 'comment'), replies_path
+          = link_to "#{english_count} #{label}", replies_path
           on your things.
 
       %h3 Recent things I did
