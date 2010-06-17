@@ -20,6 +20,7 @@ class HomeController < ApplicationController
   
   def top
     @top_users = User.find(:all, :order => 'cached_points desc', :limit => 20)
+    @categories = Category.all
   end
   
   private

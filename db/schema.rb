@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100610140602) do
+ActiveRecord::Schema.define(:version => 20100617202210) do
 
   create_table "beta_signups", :force => true do |t|
     t.string    "email_address"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(:version => 20100610140602) do
     t.string    "name"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.integer   "top_user_id"
+    t.integer   "top_user_score"
+    t.datetime  "top_user_updated_at"
   end
 
   create_table "category_subcategories", :force => true do |t|

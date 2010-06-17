@@ -4,7 +4,7 @@ class User < TwitterAuth::GenericUser
   
   has_many :things, :order => 'created_at desc'
   
-  has_many :recent_subcategories, :class_name => 'Subcategory', :through => :things, :source => :subcategory, :order => 'things.created_at desc', :limit => 5
+  has_many :recent_subcategories, :class_name => 'Subcategory', :through => :things, :source => :subcategory, :order => 'things.created_at desc', :limit => 5, :uniq => true
   
   has_many :replies, :class_name => 'ThingComment', :through => :things, :source => :comments, :order => 'created_at desc'
   

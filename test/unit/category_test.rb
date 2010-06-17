@@ -12,5 +12,5 @@ class CategoryTest < ActiveSupport::TestCase
     
     assert c.subcategories.include?(s)
   end
-  
+    
 end

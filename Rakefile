@@ -9,4 +9,6 @@ require 'rake/rdoctask'
 
 require 'tasks/rails'
 
-
+task :update_top_users => :environment do
+  Category.all.each{ |c| c.find_top_user }
+end

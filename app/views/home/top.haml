@@ -1,3 +1,11 @@
+%h2 This month's category leaders
+
+- @categories.each do |c|
+  - if c.top_user.present?
+    %p= "#{c.name.strip}: #{link_to_user(c.top_user)} with #{pluralize(c.top_user_score, 'dot')}"
+
+%br/
+
 %h2 Top users
 
 %ol#top_users
