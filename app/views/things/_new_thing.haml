@@ -9,8 +9,8 @@
         %option{ :disabled => true, :selected => true, :value => "" } &mdash; please select a thing &mdash;
         - if current_user.recent_subcategories.count > 0
           %optgroup{ :label => "Your recent categories"}
-          - current_user.recent_subcategories.each do |sub|
-            %option{ :value => sub.id }=  "#{sub.categories.first.name} - #{sub.name}"
+            - current_user.recent_subcategories.each do |sub|
+              %option{ :value => sub.id }=  "#{sub.categories.first.name} - #{sub.name}"
         - @categories.each do |cat|
           %optgroup{ :label => cat.name }
             - cat.subcategories.each do |sub|
