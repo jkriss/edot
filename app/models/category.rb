@@ -28,7 +28,10 @@ class Category < ActiveRecord::Base
         set_high_score(u, score)
       end
     end
-    self.save
+    if self.top_user.nil?
+      self.top_user_updated_at = Time.now
+      self.save
+    end
   end
   
   def set_high_score(user, score)
