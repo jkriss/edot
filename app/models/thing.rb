@@ -21,7 +21,7 @@ class Thing < ActiveRecord::Base
     cat = self.subcategory.category
     user_score = cat.user_points(self.user)
     logger.warn "comparing #{user.login}'s new category score of #{user_score} to the top score of #{cat.top_user_score}"
-    cat.set_high_score(user, user_score) if user_score > cat.top_user_score
+    cat.set_high_score(user, user_score) if cat.top_user_score.blank? || user_score > cat.top_user_score
   end
   
 end
