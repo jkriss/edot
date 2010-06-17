@@ -10,7 +10,7 @@
         - if current_user.recent_subcategories.count > 0
           %optgroup{ :label => "Your recent categories"}
             - current_user.recent_subcategories.each do |sub|
-              %option{ :value => sub.id }=  "#{sub.categories.first.name} - #{sub.name}"
+              %option{ :value => sub.id }=  "#{sub.categories.first.name} - #{sub.name} #{pluralize(sub.points, 'dot')}"
         - @categories.each do |cat|
           %optgroup{ :label => cat.name }
             - cat.subcategories.each do |sub|
