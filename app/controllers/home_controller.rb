@@ -21,6 +21,9 @@ class HomeController < ApplicationController
   def top
     @top_users = User.find(:all, :order => 'cached_points desc', :limit => 20)
     @categories = Category.all
+    @categories.each do |cat|
+      cat.find_top_user if cat.top_user_updated_at < Time.now.beginning_of_month
+    end
   end
   
   private

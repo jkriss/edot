@@ -28,6 +28,7 @@ class Category < ActiveRecord::Base
         set_high_score(u, score)
       end
     end
+    self.save
   end
   
   def set_high_score(user, score)
