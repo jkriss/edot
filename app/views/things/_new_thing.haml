@@ -1,4 +1,3 @@
-
 #new_thing
   = error_messages_for :thing
 
@@ -8,6 +7,10 @@
       =# f.input :subcategory, :label => 'Thing', :collection => @subcategories, :required => false
       %select#thing_thing_cat_id{ :name => 'thing[thing_cat_id]' }
         %option{ :disabled => true, :selected => true, :value => "" } &mdash; please select a thing &mdash;
+        - if current_user.recent_subcategories.count > 0
+          %optgroup{ :label => "Your recent categories"}
+          - current_user.recent_subcategories.each do |sub|
+            %option{ :value => sub.id }=  "#{sub.categories.first.name} - #{sub.name}"
         - @categories.each do |cat|
           %optgroup{ :label => cat.name }
             - cat.subcategories.each do |sub|
